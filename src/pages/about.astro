@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const pageTitle = "私について"
 
@@ -43,8 +44,7 @@ const textCase = "uppercase";
         </style>
 	</head>
 	<body>
-    <Navigation />
-
+        <Header />
 		<h1>{pageTitle}</h1>
         <h2>…そして私の新しいAstroサイトについて！</h2>
 
@@ -67,6 +67,9 @@ const textCase = "uppercase";
             {happy && <p>I am happy to be leaning Astro! Astroを学べて幸せです！</p>}
             {finished && <p>I finished this tutorial! このチュートリアルを終えました！</p>}
             {goal === 3 ? <p>My goal is to finish in 3 days. 3日で終えるのが目標です。</p> : <p>My goal is not 3 days. 3日が目標ではありません。</p>}
-	<Footer />
+	    <Footer />
+        <script>
+            import "../scripts/menu.js";
+        </script>
     </body>
 </html>
